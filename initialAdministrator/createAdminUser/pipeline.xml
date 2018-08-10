@@ -1,0 +1,16 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field minOccurs="0" name="connectionId" type="java.lang.String"/>
+        <field name="webApplication" type="java.lang.String"/>
+        <field name="alias" type="java.lang.String"/>
+        <field name="password" type="java.lang.String"/>
+    </structure>
+    <structure name="output"/>
+    <structure collectionName="Nodes" definition="nabu.cms.core.types.model.core.Node" name="application" namespace="nabu.web.cms.core.types.model.core"/>
+    <structure collectionName="Groups" definition="nabu.cms.core.types.model.core.Group" name="managersGroup" namespace="nabu.cms.core.types.model.core"/>
+    <structure collectionName="Groups" definition="nabu.cms.core.types.model.core.Group" name="editorsGroup" namespace="nabu.cms.core.types.model.core"/>
+    <structure collectionName="Users" definition="nabu.cms.core.types.model.core.User" name="user" namespace="nabu.web.cms.core.types.model.core"/>
+    <structure collectionName="Roles" definition="nabu.cms.core.types.model.core.Role" minOccurs="0" name="managerRole" namespace="nabu.cms.core.types.model.core"/>
+    <structure collectionName="Roles" definition="nabu.cms.core.types.model.core.Role" minOccurs="0" name="editorRole" namespace="nabu.cms.core.types.model.core"/>
+    <structure collectionName="Groups" definition="nabu.cms.core.types.model.core.Group" name="adminsGroup" namespace="nabu.cms.core.types.model.core"/>
+</structure>

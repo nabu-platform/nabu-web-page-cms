@@ -1,0 +1,32 @@
+@nocsrf
+
+title ?= null
+
+@meta
+method ?= null
+
+if (method == "post")
+	@post
+	email ?= null
+	
+	@post
+	password1 ?= null
+	
+	@post
+	password2 ?= null
+	
+	if (password1 == password2)
+		connectionId = application.configuration("nabu.cms.core.configuration")/configuration/connectionId
+		# create the user!
+		nabu.web.page.cms.initialEditor.createAdminUser(
+			connectionId: connectionId,
+			webApplication: script.environment("webApplicationId"),
+			alias: email,
+			password: password1)
+		if (request.header("Original-Target") != null)
+			redirect(request.header("Original-Target")/value)
+		else
+			redirect(server.root())
+		abort()
+
+echo(template(resource("create.html")))
