@@ -16,9 +16,9 @@ if (method == "post")
 	password2 ?= null
 	
 	if (password1 == password2)
-		connectionId = application.configuration("nabu.cms.core.configuration")/configuration/connectionId
+		connectionId = application.configuration("nabu.cms.core.configuration")/connectionId
 		# create the user!
-		nabu.web.page.cms.initialEditor.createAdminUser(
+		nabu.web.page.cms.initialAdministrator.createAdminUser(
 			connectionId: connectionId,
 			webApplication: script.environment("webApplicationId"),
 			alias: email,
@@ -29,4 +29,5 @@ if (method == "post")
 			redirect(server.root())
 		abort()
 
+disableLocalAccounts = application.configuration("nabu.cms.core.configuration")/disableLocalAccounts
 echo(template(resource("create.html")))

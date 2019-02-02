@@ -13,4 +13,5 @@
     <structure collectionName="Roles" definition="nabu.cms.core.types.model.core.Role" minOccurs="0" name="managerRole" namespace="nabu.cms.core.types.model.core"/>
     <structure collectionName="Roles" definition="nabu.cms.core.types.model.core.Role" minOccurs="0" name="editorRole" namespace="nabu.cms.core.types.model.core"/>
     <structure collectionName="Groups" definition="nabu.cms.core.types.model.core.Group" name="adminsGroup" namespace="nabu.cms.core.types.model.core"/>
+    <structure collectionName="Roles" definition="nabu.cms.core.types.model.core.Role" name="adminRole" namespace="nabu.cms.core.types.model.core"/>
 </structure>

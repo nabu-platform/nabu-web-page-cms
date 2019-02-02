@@ -1,0 +1,9 @@
+<structure interface="nabu.web.page.core.interfaces.getAllContent" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="Translations" definition="nabu.cms.core.types.model.core.Translation" maxOccurs="unbounded" minOccurs="0" name="translations" namespace="nabu.cms.core.types.model.core"/>
+    <structure definition="nabu.cms.core.configuration" name="configuration"/>
+    <structure definition="nabu.web.page.core.rest.configuration.content" minOccurs="0" name="content"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="parts" type="java.lang.String"/>
+    <field minOccurs="0" name="amountOfParts" type="java.lang.Integer"/>
+</structure>

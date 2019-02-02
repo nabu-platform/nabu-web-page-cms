@@ -9,4 +9,5 @@
     <structure collectionName="Nodes" definition="nabu.cms.core.types.model.core.Node" name="node" namespace="nabu.web.cms.core.types.model.core"/>
     <structure collectionName="Groups" definition="nabu.cms.core.types.model.core.Group" minOccurs="0" name="adminsGroup" namespace="nabu.cms.core.types.model.core"/>
     <field name="rowCount" type="java.lang.Long"/>
+    <structure definition="nabu.web.application.types.WebApplicationInformation" minOccurs="0" name="information"/>
 </structure>

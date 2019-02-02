@@ -1,0 +1,6 @@
+<structure interface="nabu.web.page.core.interfaces.setContent" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.cms.core.configuration" name="configuration"/>
+    <structure collectionName="Translations" definition="nabu.cms.core.types.model.core.Translation" minOccurs="0" name="existing" namespace="nabu.cms.core.types.model.core"/>
+</structure>

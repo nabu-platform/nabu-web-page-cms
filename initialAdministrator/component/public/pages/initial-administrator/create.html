@@ -21,10 +21,10 @@
 					<label for="email">
 						<input type="text" name="email" placeholder="email" autofocus>
 					</label>
-					<label for="password1">
+					<label for="password1" ${when(disableLocalAccounts == true, "style='display:none'", "")}>
 						<input type="password" name="password1" placeholder="password">
 					</label>
-					<label for="password2">
+					<label for="password2" ${when(disableLocalAccounts == true, "style='display:none'", "")}>
 						<input type="password" name="password2" placeholder="password again">
 					</label>
 
