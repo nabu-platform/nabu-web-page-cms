@@ -1,0 +1,4 @@
+<structure name="groupedTranslation">
+    <field minOccurs="0" name="context" type="java.lang.String"/>
+    <structure definition="nabu.web.page.core.types.translation" maxOccurs="unbounded" minOccurs="0" name="translations"/>
+</structure>

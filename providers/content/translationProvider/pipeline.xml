@@ -1,0 +1,8 @@
+<structure interface="nabu.web.page.core.interfaces.translationProvider" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.web.page.cms.providers.content.groupedTranslation" maxOccurs="unbounded" minOccurs="0" name="grouped"/>
+    <structure definition="nabu.cms.core.configuration" name="configuration"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="translations" type="java.lang.String"/>
+    <structure definition="nabu.web.page.core.types.translation" name="result"/>
+</structure>
