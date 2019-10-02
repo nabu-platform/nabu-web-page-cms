@@ -38,6 +38,8 @@ Vue.component("page-plugin-cms-social", {
 								var value = self.$services.page.getBindingValue(pageInstance, bindings[key]);
 								if (key == "title" && value) {
 									self.createMetaTag("og:title", value);
+									self.createMetaTag("title", value);
+									self.createMetaTag("twitter:title", value);
 								}
 								else if (key == "attachmentId" && value && nodeId) {
 									if (value instanceof Array) {
@@ -46,7 +48,7 @@ Vue.component("page-plugin-cms-social", {
 										}
 									}
 									else {
-										self.createMetaTag("og:image", "${environment('url')}" + self.$services.attachment.url(nodeId, value[0]));
+										self.createMetaTag("og:image", "${environment('url')}" + self.$services.attachment.url(nodeId, value));
 									}
 								}
 								else if (key == "published" && value) {
@@ -54,6 +56,8 @@ Vue.component("page-plugin-cms-social", {
 								}
 								else if (key == "description" && value) {
 									self.createMetaTag("og:description", value);
+									self.createMetaTag("description", value);
+									self.createMetaTag("twitter:description", value);
 								}
 							}
 						});
@@ -65,8 +69,14 @@ Vue.component("page-plugin-cms-social", {
 	methods: {
 		createMetaTag: function(key, value) {
 			var meta = document.createElement("meta");
-			meta.setAttribute("property", key);
-			meta.setAttribute("content", value);
+			if (key == "title" || key == "description" || (key.indexOf("twitter:") == 0 && key != "twitter:title")) {
+				meta.setAttribute("name", key);
+				meta.setAttribute("value", value);	
+			}
+			else {
+				meta.setAttribute("property", key);
+				meta.setAttribute("content", value);
+			}
 			document.head.appendChild(meta);
 		}
 	},
@@ -88,7 +98,7 @@ Vue.component("page-plugin-cms-social-configure", {
 	methods: {
 		// http://ogp.me/
 		getOgTypes: function(value) {
-			var items = ['article', 'profile', 'website', 'book', 'video.movie', 'video.episode', 'video.tv_show', 'video.other', 'music.song', 'music.album', 'music.playlist', 'music.radio_station' ];
+			var items = ['article', 'profile', 'website', 'book', 'video.movie', 'video.episode', 'video.tv_show', 'video.other', 'music.song', 'music.album', 'music.playlist', 'music.radio_station', 'facebookAppId' ];
 			if (items.indexOf(value) < 0) {
 				items.unshift(value);
 			}
