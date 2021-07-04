@@ -18,15 +18,14 @@ Vue.component("page-plugin-cms-social", {
 		var self = this;
 		this.instance.$on("hook:mounted", function() {
 			Vue.nextTick(function() {
-				console.log("instance ready to go");
 				var pageInstance = self.$services.page.getPageInstance(self.page, self);
 				if (self.page.content.path) {
-					// remove existing meta
-					var meta = document.head.querySelectorAll("meta[property]");
-					for (var i = 0; i < meta.length; i++) {
-						meta[i].parentNode.removeChild(meta[i]);
-					}
 					if (self.page.content.social && self.page.content.social.bindings) {
+						// remove existing meta
+						var meta = document.head.querySelectorAll("meta[property]");
+						for (var i = 0; i < meta.length; i++) {
+							meta[i].parentNode.removeChild(meta[i]);
+						}
 						var bindings = self.page.content.social.bindings;
 						var nodeId = bindings["nodeId"] ? self.$services.page.getBindingValue(pageInstance, bindings["nodeId"]) : null;
 						// TODO: could support profile too in the future? (and other stuff of course)
