@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2018-08-10T07:14:54.240+02:00" lastModified="2018-08-13T10:54:57.676+02:00" leaf="true" version="16"><environmentId>hyperion</environmentId><hidden>false</hidden><properties/><references>nabu.cms.core.types.model.core.Node</references><references>nabu.web.application.Services.information</references><references>java.lang.Long</references><references>nabu.cms.core.database.user.selectByGroupAndRealm</references><references>nabu.cms.core.types.model.core.Group</references><references>java.lang.Boolean</references><references>java.lang.String</references><references>nabu.web.application.types.WebApplicationInformation</references><references>nabu.web.page.cms.providers.contextResolver</references></node>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2018-08-10T07:14:54.240+02:00" lastModified="2022-10-17T13:50:34.319+02:00" leaf="true" version="19">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.cms.core.types.model.core.Node</references>
+    <references>nabu.web.application.Services.information</references>
+    <references>java.lang.Long</references>
+    <references>nabu.cms.core.database.user.selectByGroupAndRealm</references>
+    <references>nabu.cms.core.types.model.core.Group</references>
+    <references>java.lang.Boolean</references>
+    <references>java.lang.String</references>
+    <references>nabu.web.application.types.WebApplicationInformation</references>
+    <references>nabu.web.page.cms.providers.contextResolver</references>
+</node>
