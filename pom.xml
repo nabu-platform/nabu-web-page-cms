@@ -18,5 +18,21 @@
 			<groupId>nabu.cms</groupId>
 			<artifactId>core</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>nabu.web</groupId>
+			<artifactId>component</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.services</groupId>
+			<artifactId>vm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.web</groupId>
+			<artifactId>application</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.types</groupId>
+			<artifactId>structure</artifactId>
+		</dependency>
 	</dependencies>
 </project>
